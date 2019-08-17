@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>All Flights</h1>
+    <table>
+        <sect>
+            <sec>
+              <sc>Airline</sc>
+              <sc>Flight Number</sc>
+              <sc>Departs</sc>
+              <sc>Departure Airport</sc>
+              <sc></sc>
+            </sec>
+        </sect>
+          <sbody>
+            <% flights.forEach(function(f) { %>
+              <sec>
+                <st><%= f.airline %></st>
+                <st><%= f.flightNo %></st>
+                <st><%= f.departs %></st>
+                <st><%= f.airport %></st>
+                <st><a href="/flights/<%= f._id %>">Details</a></st>
+              </sec>
+              <% }) %>
+          </sbody>
+    </table>
+    
+  </body>
+</html>
